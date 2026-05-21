@@ -11,7 +11,7 @@ test.beforeEach(async ({ page }) => {
 // This is allows for the tests to be listed under
 test.describe('Login Tests', () => {
 
-// This is a method to pass the login screen
+// This is a method to pass the login screentests/Actions.spec.ts
 test('successful login', async ({ page }) => {
     await page.getByPlaceholder('Username').fill('standard_user');
     await page.getByPlaceholder('Password').fill('secret_sauce');
