@@ -7,6 +7,10 @@ test.beforeEach(async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
 });
 
+
+// This is allows for the tests to be listed under
+test.describe('Login Tests', () => {
+
 // This is a method to pass the login screen
 test('successful login', async ({ page }) => {
     await page.getByPlaceholder('Username').fill('standard_user');
@@ -30,4 +34,6 @@ test('failed login shows error', async ({ page }) => {
     await expect(page.getByText('Username and password do not match')).toBeVisible()
 
     await expect(page).toHaveURL('https://www.saucedemo.com/')
+});
+
 });
